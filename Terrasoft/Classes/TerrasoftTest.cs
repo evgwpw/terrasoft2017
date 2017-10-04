@@ -80,5 +80,21 @@ namespace Terrasoft.Classes
                 dictionary[ch] = 1;
             }
         }
+        public static int NFib(int n)
+        {
+            IEnumerable<int> Fib()
+            {
+                var a = 1;
+                var b = 1;
+                yield return a;
+                yield return b;
+                while (true)
+                {
+                    b = a + (a = b);
+                    yield return b;
+                }
+            }
+            return Fib().Skip(n).Take(1).First();
+        }
     }
 }

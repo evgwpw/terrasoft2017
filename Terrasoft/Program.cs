@@ -11,6 +11,12 @@ namespace Terrasoft
         static string[] arr = { "ааа bbb с", "а, b", "ааа bb с", "а", "а, b, с", "а b с" };
         static void Main(string[] args)
         {
+            for (var i = 0; i < 10; i++)
+            {
+                var dd = Classes.TerrasoftTest.NFib(i);
+                Console.WriteLine(dd);
+            }
+
             foreach(var str in arr)
             {
                 //Console.WriteLine("First");
